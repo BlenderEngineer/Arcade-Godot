@@ -1,0 +1,10 @@
+AudioStreamPlayer3D
+AudioStreamPlayer
+CSGSphere3D
+CharacterBody3D
+CollisionShape3D
+Area3D
+Node
+MeshInstance3D
+RigidDynamicBody3D
+WorldEnvironment

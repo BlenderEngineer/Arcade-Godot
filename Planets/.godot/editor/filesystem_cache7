@@ -1,0 +1,13 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1658072186
+default_env.tres::Environment::-1::1658001575::0::1::::<><>::
+icon.png::CompressedTexture2D::3743957101227309587::1657994572::1658072187::1::::<><>::
+Main.tscn::PackedScene::-1::1658002528::0::1::::<><>::res://Planet.tscn
+Planet.gd::GDScript::-1::1658001575::0::1::::<><>::
+Planet.tscn::PackedScene::-1::1658002528::0::1::::<><>::res://PlanetMeshFace.gd<>res://Planet.gd<>res://PlanetData.gd<>res://PlanetNoise.gd<>res://PlanetMaterial.tres<>res://PlanetBiome.gd
+PlanetBiome.gd::GDScript::-1::1658001575::0::1::::PlanetBiome<>Resource<>::
+PlanetData.gd::GDScript::-1::1658001575::0::1::::<><>::
+PlanetMaterial.tres::ShaderMaterial::-1::1658001575::0::1::::<><>::
+PlanetMeshFace.gd::GDScript::-1::1658001575::0::1::::PlanetMeshFace<>MeshInstance3D<>::
+PlanetNoise.gd::GDScript::-1::1658001575::0::1::::PlanetNoise<>Resource<>::
+README.md::TextFile::-1::1657994572::0::1::::<><>::

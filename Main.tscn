@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://djcpuhciwsvxl"]
+
+[ext_resource type="PackedScene" uid="uid://buyuxwftqvuul" path="res://FPS.tscn" id="1"]
+[ext_resource type="Script" path="res://GameHandler.gd" id="1_wfs2f"]
+[ext_resource type="AudioStream" uid="uid://nmuixjwctwy3" path="res://Music.mp3" id="3_o4f5o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b3anf"]
+
+[sub_resource type="Sky" id="1"]
+sky_material = SubResource("ProceduralSkyMaterial_b3anf")
+process_mode = 3
+
+[sub_resource type="Environment" id="2"]
+background_mode = 1
+background_color = Color(0.494118, 0.494118, 0.494118, 1)
+sky = SubResource("1")
+ssao_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_albedo = Color(0.494118, 0.556863, 0.615686, 1)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_wfs2f")
+
+[node name="FPS" parent="." instance=ExtResource("1")]
+
+[node name="CSGBox" type="CSGBox3D" parent="."]
+transform = Transform3D(65, 0, 0, 0, 1, 0, 0, 0, 65, 0, -1, 0)
+use_collision = true
+collision_layer = 65535
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("2")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_o4f5o")

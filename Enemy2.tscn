@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2nk12xpmisqy"]
+
+[ext_resource type="Script" path="res://EnemyHandler.gd" id="1_3dc2a"]
+[ext_resource type="AudioStream" uid="uid://desygn7ilmuih" path="res://Death2.wav" id="2_bqu7n"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3txse"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jerln"]
+albedo_color = Color(0.513726, 0, 0, 1)
+emission_enabled = true
+emission_energy = 4.24
+
+[node name="Enemy2" type="CharacterBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -10.8325, 10.9706, -11.8857)
+collision_layer = 65535
+metadata/Health = null
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.322212, 0, 0, 0)
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_3dc2a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 0.7, 0, 0, 0)
+shape = SubResource("SphereShape3D_3txse")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+material = SubResource("StandardMaterial3D_jerln")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("SphereShape3D_3txse")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_bqu7n")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_area_3d_body_entered"]

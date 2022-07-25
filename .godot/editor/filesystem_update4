@@ -1,0 +1,7 @@
+res://Main.tscn
+res://FPS.tscn
+res://bullet.tscn
+res://Enemy.tscn
+res://EnemyHandler.gd
+res://Enemy2.tscn
+res://GameHandler.gd
